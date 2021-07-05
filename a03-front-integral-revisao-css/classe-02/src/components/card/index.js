@@ -1,18 +1,18 @@
 
 import './style.css'
 
-export default function Card() {
+export default function Card({card}) {
 
   return (
 
-    <div className="card">
+    <div className="card" >
 
-      <img src={ {} } alt='imagem logo' />
+      <img src={ card.icon } alt='imagem logo' />
 
-      <h2>{ }</h2>
-      <p>{ }</p>
+      <h2>{ card.title }</h2>
+      <p>{ card.text }</p>
 
-      <button>{ }</button>
+      <button>{ card.buttonText }</button>
 
     </div>
   )
