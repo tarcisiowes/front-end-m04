@@ -5,9 +5,9 @@ import { Link } from 'react-router-dom'
 export default function SignIn() {
 
   return (
-    <div className="conteinerForm">
+    <div className="conteinerForm ">
 
-      <form className="formLogin">
+      <form className="formLogin form">
 
         <div className="textCenter mb1rem">
 
@@ -32,14 +32,14 @@ export default function SignIn() {
           
         </div>
 
-        <div>
+        <div className="flexRow itemsCenter">
 
           <input type="checkbox" value="Lembrar-me" name="remember" />
           <span htmlFor="remember" >Lembrar-me</span>
 
         </div>
 
-        <Link to="/forgotpassword" className="my1rem">Esqueci minha senha</Link> <br/>
+        <Link to="/forgotpassword" className="my1rem">Esqueci minha senha</Link>
         <span className="lightLabel" >@2021 Todos os direitos reservados Tarcisio wesley</span>
       </form>
     </div>

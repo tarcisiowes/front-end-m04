@@ -1,3 +1,10 @@
+body{
+  background-color: #1b1a34;
+  background-image: url('../assets/vetor1.svg');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
 .conteinerForm{
   display: flex;
   align-items: center;
@@ -15,14 +22,18 @@
   padding: 45px 61px;
 }
 
+label{
+  margin-bottom: 5px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
 .h1{
   font-size: 48px;
 }
 
 input{
-  margin-bottom: 5px;
-  font-size: 18px;
-  font-weight: bold;
+  margin-bottom: 30px;
 }
 
 a{
