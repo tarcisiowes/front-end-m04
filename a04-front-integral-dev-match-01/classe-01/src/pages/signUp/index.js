@@ -1,8 +1,17 @@
 import './styles.css'
 import { Link } from 'react-router-dom'
 import AllRightReserved from '../../components/allrightreserved'
+import InputPassword from '../../components/inputpassword'
+import { useState } from 'react'
+
+
+
+
 
 export default function SignUp() {
+  
+  const [password, setPassword] = useState('')
+  const [confirmPassword, setConfirmPassword] = useState('')
 
   return (
     <div className="conteinerForm ">
@@ -32,12 +41,7 @@ export default function SignUp() {
               
             </div>
 
-            <div className="flexColunm">
-
-              <label htmlFor="password" >Senha</label>
-              <input id="password" type="password" placeholder="Digite sua senha" />
-
-            </div>
+            <InputPassword label="senha" placeholder="Digite sua senha" value={password} setValue={setPassword} />
             
           </div>
 
@@ -56,12 +60,7 @@ export default function SignUp() {
               
             </div>
 
-            <div className="flexColunm">
-
-              <label htmlFor="confirmPassword" >Confirme sua senha</label>
-              <input id="confirmPassword" type="password" placeholder="Digite sua senha novamente" />
-
-            </div>
+            <InputPassword label="Confirme sua senha" placeholder="Digite sua senha novamente" value={confirmPassword} setValue={setConfirmPassword} />
             
           </div>
         </div>
