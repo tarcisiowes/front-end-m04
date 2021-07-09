@@ -2,16 +2,40 @@ import './styles.css'
 import { Link } from 'react-router-dom'
 import AllRightReserved from '../../components/allrightreserved'
 import InputPassword from '../../components/inputpassword'
-import { useState } from 'react'
-
-
-
+import { useState, useEffect } from 'react'
+import { getCityByCep } from '../../services/viacep'
 
 
 export default function SignUp() {
   
   const [password, setPassword] = useState('')
   const [confirmPassword, setConfirmPassword] = useState('')
+  const [cep, setCep] = useState('')
+  const [city, setCity] = useState('')
+
+  async function loadCityByCep(myCep) {
+    
+    const cityByCep = await getCityByCep(myCep)
+    setCity(cityByCep)
+  }
+
+  useEffect(() => {
+
+    if (cep.indexOf('-') !== -1) {
+      
+      if (cep.length === 9) {
+        
+        loadCityByCep(cep)
+      }
+      return
+    }
+
+    if (cep.length === 8) {
+      loadCityByCep(cep)
+    }
+
+  }, [cep])
+  
 
   return (
     <div className="conteinerForm ">
@@ -37,7 +61,7 @@ export default function SignUp() {
             <div className="flexColunm">
 
               <label htmlFor="cep" >CEP</label>
-              <input id="cep" type="text" placeholder="Digite seu cep" />
+              <input id="cep" type="text" placeholder="Digite seu cep" value={ cep } onChange={ (e) => setCep(e.target.value) }/>
               
             </div>
 
@@ -56,7 +80,7 @@ export default function SignUp() {
             <div className="flexColunm">
 
               <label htmlFor="city" >Cidade</label>
-              <input id="city" type="text" placeholder="Digite seu cidade" />
+              <input id="city" type="text" placeholder="Digite seu cidade" value={ city } onChange={ (e) => setCity(e.target.value) } />
               
             </div>
 
