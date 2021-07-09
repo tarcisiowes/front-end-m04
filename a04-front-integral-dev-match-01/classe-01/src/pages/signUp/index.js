@@ -4,6 +4,8 @@ import AllRightReserved from '../../components/allrightreserved'
 import InputPassword from '../../components/inputpassword'
 import { useState, useEffect } from 'react'
 import { getCityByCep } from '../../services/viacep'
+import { toast } from 'react-toastify';
+
 
 
 export default function SignUp() {
@@ -16,10 +18,30 @@ export default function SignUp() {
   async function loadCityByCep(myCep) {
     
     const cityByCep = await getCityByCep(myCep)
+
+    if (!cityByCep) {
+
+      toast.error("Digite um CEP válido", {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      })
+      
+      return
+    }
+    
     setCity(cityByCep)
   }
 
   useEffect(() => {
+
+    if (cep.length < 9 && city.length > 0) {
+      setCity('')
+    }
 
     if (cep.indexOf('-') !== -1) {
       
@@ -61,7 +83,7 @@ export default function SignUp() {
             <div className="flexColunm">
 
               <label htmlFor="cep" >CEP</label>
-              <input id="cep" type="text" placeholder="Digite seu cep" value={ cep } onChange={ (e) => setCep(e.target.value) }/>
+              <input id="cep" type="text" placeholder="Digite seu cep" value={ cep } onChange={ (e) => setCep(e.target.value) } maxLength={ 9 }/>
               
             </div>
 
