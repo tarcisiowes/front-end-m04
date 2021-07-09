@@ -1,6 +1,6 @@
 import './styles.css'
 import { Link } from 'react-router-dom'
-
+import AllRightReserved from '../../components/allrightreserved'
 
 export default function SignUp() {
 
@@ -67,7 +67,7 @@ export default function SignUp() {
         </div>
 
         <button className="btnDarkBlue">Cadastrar</button>
-        <span className="lightLabel" >@2021 Todos os direitos reservados Tarcisio wesley</span>
+        <AllRightReserved/>
       </form>
     </div>
   )

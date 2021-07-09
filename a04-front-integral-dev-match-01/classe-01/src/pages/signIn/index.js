@@ -1,5 +1,6 @@
 import './styles.css'
 import { Link } from 'react-router-dom'
+import AllRightReserved from '../../components/allrightreserved'
 
 
 export default function SignIn() {
@@ -40,7 +41,7 @@ export default function SignIn() {
         </div>
 
         <Link to="/forgotpassword" className="my1rem">Esqueci minha senha</Link>
-        <span className="lightLabel" >@2021 Todos os direitos reservados Tarcisio wesley</span>
+        <AllRightReserved/>
       </form>
     </div>
   )
