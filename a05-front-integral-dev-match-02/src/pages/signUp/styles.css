@@ -1,0 +1,14 @@
+.formRegister {
+  justify-content: space-between;
+  width: 700px;
+  height: auto;
+}
+
+.bodyRegister {
+  display: flex;
+  justify-content: space-between;
+}
+
+.bodyRegister div{
+  margin: 0px 10px;
+}
