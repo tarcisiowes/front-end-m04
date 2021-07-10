@@ -1,0 +1,43 @@
+body{
+}
+
+.conteinerMain {
+  height: 100vh;
+  position: relative;
+  background-color: white;
+}
+
+.homeInfo {
+  justify-content: space-between;
+  max-width: 1250px;
+  height: auto;
+  background-color: white;
+}
+
+.conteinerMain{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  
+}
+
+.infos{
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.accIcon{
+  position: absolute;
+  top: 55px;
+  right: 55px;
+}
+
+.logoMain{
+  margin-left: 30%;
+  margin-top: 70px;
+  width: 400px;
+  height: 220px;
+}
+
