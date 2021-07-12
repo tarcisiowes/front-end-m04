@@ -10,13 +10,13 @@ export default function InputPassword({ label, placeholder, value, setValue }) {
 
   return (
     
-        <div className="flexColunm inputPassword" >
+    <div className="flexColunm inputPassword" >
 
       <label htmlFor="password" >{ label }</label>
       <input id="password" type={ showPassword ? "text" : "password" } placeholder={ placeholder } value={ value } onChange={ (e) => setValue(e.target.value) }/>
 
-          <FontAwesomeIcon className="eyePassword" icon={ showPassword? faEyeSlash: faEye } onClick={() => setShowPassword(!showPassword)} size="lg" />
+      <FontAwesomeIcon className="eyePassword" icon={ showPassword? faEyeSlash: faEye } onClick={() => setShowPassword(!showPassword)} size="lg" />
           
-        </div>
+    </div>
   )
 }

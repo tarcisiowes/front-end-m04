@@ -1,5 +1,5 @@
 import './styles.css'
-// import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 // import { useState, useEffect } from 'react'
 import logoMain from '../../assets/logoMain.svg'
 import React from 'react'
@@ -16,8 +16,9 @@ export default function Main() {
   return (
 
     <div className="conteinerMain ">
+      <Link to="/profile">
         <AccountCircleIcon className="accIcon" style={{ fontSize: 70 }}/>
-
+      </Link>
       <div className="homeInfo">
         <img className="logoMain" src={ logoMain } alt="logo"/>
         <h1>Google</h1>
@@ -38,7 +39,7 @@ export default function Main() {
         <h2>Salario / Benefícios</h2>
         <p>R$ 5.200,00 / VT, VA, Plano de saúde, Gympass, Auxílio Home Office</p>
 
-        <div className="flexRow contentCenter mb2rem">
+        <div className="flexRow contentCenter mb2rem gap2rem">
 
           <FavoriteBorderIcon  style={ { color: 'green', fontSize: 50 } } />  <DeleteIcon style={{ fontSize: 50 }} color='secondary' />
 
