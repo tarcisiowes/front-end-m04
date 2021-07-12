@@ -1,0 +1,50 @@
+.formRegister {
+  justify-content: space-between;
+  width: 700px;
+  height: auto;
+}
+
+.bodyProfile {
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.bodyProfile div{
+  margin: 0px 0px;
+}
+
+.conteinerProfile{
+  height: 100vh;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.photoProfile{
+  width: 400px;
+  height: 505px;
+}
+
+.formProfile{
+  width: 505px;
+  height: 505px;
+}
+
+.bodyProfile .inputPassword{
+  position: relative;
+}
+
+.bodyProfile .eyePassword{
+  position: absolute;
+  top: 45px;
+  right: 190px;
+  cursor: pointer;
+}
+
+.closeIcon{
+  position: absolute;
+  top: 55px;
+  right: 55px;
+}

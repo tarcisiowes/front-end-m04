@@ -1,0 +1,17 @@
+.btnDarkBlue{
+  background-color: #1b1a34;
+  color: white;
+  width: 325px;
+  cursor: pointer;
+}
+
+.btnChip{
+  padding: 5px;
+  width: 88px;
+  height: 32px;
+  background: #FFFFFF;
+  border: 1px solid #505DD1;
+  box-sizing: border-box;
+  border-radius: 16px !important; 
+  cursor: pointer;
+}
